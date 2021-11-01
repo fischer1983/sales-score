@@ -1,0 +1,835 @@
+{
+	"info": {
+		"_postman_id": "11cc989b-a821-4df4-bed8-6ba3f6694b35",
+		"name": "Sales Score",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Salesman",
+			"item": [
+				{
+					"name": "Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"registry\": \"3333\",\n    \"name\": \"Blanka\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/salesman",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"salesman"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save Salesman 1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"registry\": \"1111\",\n    \"name\": \"Luciano\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/salesman",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"salesman"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "43"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"registry\": \"1111\",\n    \"name\": \"Luciano\"\n}"
+						},
+						{
+							"name": "Save Salesman 2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"registry\": \"2222\",\n    \"name\": \"Johnny Cage\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/salesman",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"salesman"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "47"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 5,\n    \"registry\": \"2222\",\n    \"name\": \"Johnny Cage\"\n}"
+						},
+						{
+							"name": "Save Salesman 3",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"registry\": \"3333\",\n    \"name\": \"Blanka\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/salesman",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"salesman"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "42"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 6,\n    \"registry\": \"3333\",\n    \"name\": \"Blanka\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/salesman?registry=6543",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"salesman"
+							],
+							"query": [
+								{
+									"key": "registry",
+									"value": "6543"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Find",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/salesman?registry=1111",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"salesman"
+									],
+									"query": [
+										{
+											"key": "registry",
+											"value": "1111"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "43"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"registry\": \"1111\",\n    \"name\": \"Luciano\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"registry\": \"1111\",\n    \"name\": \"Luciano Lumertz\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/salesman/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"salesman",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"registry\": \"1111\",\n    \"name\": \"Luciano Lumertz\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/salesman/4",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"salesman",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/salesman/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"salesman",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/salesman/4",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"salesman",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Find All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/salesman/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"salesman",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sku\": \"4444\",\n    \"name\": \"MacBook Air\",\n    \"price\": 399\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/product",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save iPhone",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sku\": \"1234\",\n    \"name\": \"iPhone\",\n    \"price\": 1.00\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/product",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"product"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "50"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"sku\": \"1234\",\n    \"name\": \"iPhone\",\n    \"price\": 1\n}"
+						},
+						{
+							"name": "Save iPad",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sku\": \"9876\",\n    \"name\": \"iPad\",\n    \"price\": 1.99\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/product",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"product"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "48"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"sku\": \"9876\",\n    \"name\": \"iPad\",\n    \"price\": 1.99\n}"
+						},
+						{
+							"name": "Save MacBookAir",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sku\": \"7777\",\n    \"name\": \"MacBook Air\",\n    \"price\": 599\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/product",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"product"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "57"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"sku\": \"7777\",\n    \"name\": \"MacBook Air\",\n    \"price\": 599\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sku\": \"1234\",\n    \"name\": \"iPhone\",\n    \"price\": 299\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/product/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update iPhone",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sku\": \"1234\",\n    \"name\": \"iPhone\",\n    \"price\": 299\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/product/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"product",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/product/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"product",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete MacBookAir",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/product/3",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"product",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "content-length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Sale",
+			"item": [
+				{
+					"name": "Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"salesmanId\": 1,\n    \"productsId\": [2, 3]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/sale",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "save",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"salesmanId\": 1,\n    \"productsId\": [2, 3]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/sale",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"sale"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "100"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"9e7bd48d-f297-44fc-8715-b6e29d031d4e\",\n    \"salesmanId\": 1,\n    \"productsId\": [\n        2,\n        3\n    ],\n    \"totalPrice\": 1098\n}"
+						}
+					]
+				},
+				{
+					"name": "Top Selling Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/sale/getTopSellingProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale",
+								"getTopSellingProduct"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Top Selling Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/sale/getTopSellingProduct",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"sale",
+										"getTopSellingProduct"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "135"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"productSku\": \"4444\",\n        \"productName\": \"MacBook Air\",\n        \"soldQuantity\": 1\n    },\n    {\n        \"productSku\": \"5555\",\n        \"productName\": \"MacBook Pro\",\n        \"soldQuantity\": 1\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Salesman for higher sales",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/sale/getSalesmanForHigherSales",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sale",
+								"getSalesmanForHigherSales"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Salesman for higher sales",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/sale/getSalesmanForHigherSales",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"sale",
+										"getSalesmanForHigherSales"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "content-length",
+									"value": "72"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"salesmanRegistry\": \"3333\",\n        \"salesmanName\": \"Blanka\",\n        \"totalSold\": 898\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
